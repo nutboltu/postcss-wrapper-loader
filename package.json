@@ -1,0 +1,18 @@
+{
+  "name": "postcss-wrapper-loader",
+  "version": "0.0.1",
+  "description": "This plugin wraps all the cssClass in a css file with a prefix class while webpack compilation. It helps to scope a specific css file with a prefix class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postcss-wrapper"
+  ],
+  "author": "Farhad Yasir",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.15.0",
+    "postcss": "^6.0.1"
+  }
+}
