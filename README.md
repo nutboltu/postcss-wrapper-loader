@@ -1,7 +1,8 @@
-
+## PostCss Wrapper Loader
 ### Example
+This plugin wraps all the cssClasses in a css file with a prefix class while webpack bundled. It helps to scope a specific css file with a prefix class
 
-Let the style file `styles.css` is:
+Consider a simple css file `styles.css`:
 ```
 .css-class1 {height: auto;}.css-class2 {width: auto;}
 ```
