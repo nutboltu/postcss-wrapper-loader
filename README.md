@@ -1,4 +1,5 @@
-## PostCss Wrapper Loader
+## PostCss Wrapper Loader for Webpack
+
 ### Example
 This plugin wraps all the cssClasses in a css file with a prefix class while webpack bundled. It helps to scope a specific css file with a prefix class
 
@@ -18,7 +19,7 @@ In the webpack config file initialize the loader
 const PostCssWrapper = require('postcss-wrapper-loader');
 ```
 
-then within your webpack plugins:
+add this plugin in webpack plugins
 ```
   plugins: [
     new ExtractTextWebpackPlugin('styles.css'),

@@ -35,10 +35,10 @@ PostCssWrapper.prototype.apply = function(compiler) {
     const source = assets[file].source();
     const processor = postCss([postCssWrapperPlugin(container)]);
 
-    processor.process(source).then(function(result){
+    processor.process(source).then(function(result) {
       compilation.assets[file] = {
-        source: result.css,
-      size: result.css.length
+        source: function() { return result.css; },
+        size: function() { return result.css.length; }
   };
     callback();
   }, callback);
