@@ -16,6 +16,9 @@ const postCssWrapperPlugin= postCss.plugin('postcss-wrapper-plugin', function(pr
 
 const joinPrefix = function(prefix) {
   return function(selector) {
+    if(selector === 'html') {
+      return selector+prefix;
+    }
     return _.join(' ', [prefix, selector]);
   };
 };

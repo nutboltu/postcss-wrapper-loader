@@ -1,0 +1,8 @@
+ ignore all
+
+*
+
+# override above and include followings
+
+!index.js
+!package.json

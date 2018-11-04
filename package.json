@@ -1,6 +1,6 @@
 {
   "name": "postcss-wrapper-loader",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "private": false,
   "description": "This plugin wraps all the cssClasses in a css file with a prefix class while webpack bundled. It helps to scope a specific css file with a prefix class",
   "main": "index.js",
@@ -12,7 +12,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "postcss-wrapper"
+    "postcss-wrapper",
+    "global class wrapper",
+    "parent class wrapper"
   ],
   "author": "Farhad Yasir",
   "license": "MIT",
