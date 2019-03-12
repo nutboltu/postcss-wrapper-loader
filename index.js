@@ -6,6 +6,10 @@ const postCssWrapperPlugin= postCss.plugin('postcss-wrapper-plugin', function(pr
       css.walkRules(function(rule) {
         if (_.isEqual(_.get('parent.name', rule), 'keyframes'))
           return;
+        if (_.isEqual(_.get('parent.name', rule), '-webkit-keyframes'))
+          return;
+        if (_.isEqual(_.get('parent.name', rule), '-moz-keyframes'))
+          return;
 
         const selector = rule.selector;
         rule.selector = _.pipe(_.split(','), _.map(_.pipe(_.trim, joinPrefix(prefix))),
