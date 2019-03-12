@@ -1,11 +1,14 @@
 const _ = require('lodash/fp');
 const postCss = require('postcss');
 
+const keyFramesParent = ['keyframes', '-webkit-keyframes', '-moz-keyframes'];
+
 const postCssWrapperPlugin= postCss.plugin('postcss-wrapper-plugin', function(prefix) {
     return function(css) {
       css.walkRules(function(rule) {
-        if (_.isEqual(_.get('parent.name', rule), 'keyframes'))
-          return;
+        let parentName = _.get('parent.name', rule);
+        if (_.includes(parentName, keyFramesParent))
+            return;
 
         const selector = rule.selector;
         rule.selector = _.pipe(_.split(','), _.map(_.pipe(_.trim, joinPrefix(prefix))),
